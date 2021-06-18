@@ -1,0 +1,50 @@
+#!/bin/bash
+
+
+a=17
+b=14
+c=77
+d=2
+e=8
+
+# =
+if [ $a -eq 17 ]; then
+	echo "a == 17"
+else
+	echo "a != 17"
+fi
+
+# >=
+if [ $a -ge $e ]; then
+	echo "a >= $e"
+else
+	echo "a < $e"
+fi
+
+# >
+if [ $a -gt $d ]; then
+	echo "a > $d"
+else
+	echo "a <= $d"
+fi
+
+# <=
+if [ $b -le $c ]; then
+	echo "b <= $c"
+else
+	echo "b > $c"
+fi
+
+# <
+if [ $d -lt $a ]; then
+	echo "d < $a"
+else
+	echo "d >= $a"
+fi
+
+# !=
+if [ $a -ne $b ]; then
+	echo "a != $b"
+else
+	echo "a == $b"
+fi

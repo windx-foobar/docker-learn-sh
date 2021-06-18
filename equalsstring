@@ -1,0 +1,52 @@
+#!/bin/bash
+
+
+a="foo"
+b="bar"
+c="baz"
+d="foo-bar"
+e="foo-baz"
+zero=""
+not_zero="foo-bar-baz"
+
+# =
+if [ $a = $c ]; then
+	echo "a == '$c'"
+else
+	echo "a != '$c'"
+fi
+
+# !=
+if [ $c != "baz" ]; then
+	echo "c != 'baz'"
+else
+	echo "c == 'baz'"
+fi
+
+# >
+if [ $d \> $e ]; then
+	echo "length d > length '$e'"
+else
+	echo "length d <= length '$e'"
+fi
+
+# <
+if [ $d \< $a ]; then
+	echo "length d < length '$a'"
+else
+	echo "length d >= length '$a'"
+fi
+
+# length greater 0
+if [ -n $zero ]; then
+	echo "length '$zero' greater 0"
+else
+	echo "length '$zero' equals 0"
+fi
+
+# length equals 0
+if [ -z $zero ]; then
+	echo "length '$zero' equals 0"
+else
+	echo "length '$zero' greater 0"
+fi
