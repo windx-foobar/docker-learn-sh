@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# for loop
+file="examples/file"
+
+for str in first second third fourth fifth; do
+   echo "The $str item"
+done
+
+echo "####"
+
+for str in "Foo Bar" "Foo Baz" "Bar Baz"; do
+   echo "This is: $str"
+done
+
+echo "####"
+
+for val in $(cat $file); do
+   echo " $val"
+done
+
+echo "####"
+
+IFS=$'\n'
+file="/etc/passwd"
+
+for user in $(cat $file); do
+   echo $user
+done
